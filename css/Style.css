@@ -46,11 +46,43 @@
     margin-top: 1rem
 }
 
+.Header-text{
+    color: #868e96!important;
+    text-align: center;
+    font-size: 20px;    
+}
+
+
+.logHeader{
+    color: black;
+    font-size: 20px;
+    margin-bottom: 1em;
+}
+
+.logContainer{
+    margin: 2rem;
+    background-color: white;
+    opacity: 0.75;
+    border-radius: 15px;
+    text-align:center;
+    padding:1em;
+}
+
+.logText{
+    color: #868e96!important;    
+}
 
 @media (min-width: 20em) {
     .featurette-heading {
         margin-top: 2rem;
     }
+
+    .Header-text{
+        margin-top: 3rem;
+        font-size: 30px;
+        margin-bottom: 1rem;
+    }
+
 }
 @media (min-width: 40em) {
     .carousel-caption p {
@@ -61,10 +93,38 @@
     .featurette-heading {
         font-size: 50px;
     }
+
+    .Header-text{
+        margin-top: 4rem;
+        font-size: 50px;
+        margin-bottom: 2rem;
+    }
+    
+    .logHeader{
+        font-size: 30px;
+        margin-bottom: 1.5em;
+    }
+
+    .logContainer{
+        margin: 2rem;
+        padding:4em;
+        padding-top: 2em;
+    }
 }
 @media (min-width: 62em) {
     .featurette-heading {
         margin-top: 5rem;
+    }
+
+    .Header-text{
+        margin-top: 5rem;
+        font-size: 60px;
+        margin-bottom: 3rem;
+    }
+
+    .logHeader{
+        font-size: 40px;
+        margin-bottom: 1.5em;
     }
 }
 
@@ -76,4 +136,12 @@
     height: 60px;
     line-height: 60px;
     width: 100%;
+    position: relative;
+    margin-bottom: 0 !important;
+}
+
+
+.activeNavItem{
+    font-size: 110%;
+    color: lightsalmon !important;
 }
