@@ -13,9 +13,9 @@
     <link rel="shortcut icon" href="Content/favico.ico">
 </head>
 
-<body style="background-color: black">
+<body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="background-color: black !important;">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <a class="navbar-brand" href="index.html">Projektarbeit</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -44,8 +44,72 @@
         </nav>
     </header>
 
-    <main style="margin-top: 3rem">
-
+    <main class="container">
+        <div class="Header-text">Bootstrap Doku</div>
+        <p>Visit <a href="https://www.getbootstrap.com">GetBootstrap</a> and download the latest version of Bootstrap.</p>
+        <p>Create a project folder, and copy all the donwloaded folders in your project folder.</p><br/><br/>
+        <h3>Starter template</h3><br/>
+        <figure class="highlight">
+            <pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+            <span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;head&gt;</span>
+                <span class="c">&lt;!-- Required meta tags --&gt;</span>
+                <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1, shrink-to-fit=no"</span><span class="nt">&gt;</span>
+            
+                <span class="c">&lt;!-- Bootstrap CSS --&gt;</span>
+                <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;/head&gt;</span>
+              <span class="nt">&lt;body&gt;</span>
+                <span class="nt">&lt;h1&gt;</span><span class="white">Hello, world</span><span class="nt">&lt;/h1&gt;</span>
+            
+                <span class="c">&lt;!-- Optional JavaScript --&gt;</span>
+                <span class="c">&lt;!-- jQuery first, then Popper.js, then Bootstrap JS --&gt;</span>
+                <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.2.1.slim.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+                <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+                <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+              <span class="nt">&lt;/body&gt;</span>
+            <span class="nt">&lt;/html&gt;</span></code></pre>
+        </figure>
+        <br/>
+        <br/>
+        <h3>How it works</h3><br/>
+        <p><a href="https://getbootstrap.com/docs/4.0/layout/grid/">Bootstrap’s grid system</a> uses a series of containers,
+            rows, and columns to layout and align content. It’s built with flexbox and is fully responsive. Below is an example
+            and an in-depth look at how the grid comes together.
+        </p>
+        <p>Breaking it down, here’s how it works:</p>
+        <ul>
+            <li>Containers provide a means to center your site’s contents. Use <code class="highlighter-rouge">.container</code>                for fixed width or <code class="highlighter-rouge">.container-fluid</code> for full width.</li>
+            <li>Rows are horizontal groups of columns that ensure your columns are lined up properly. We use the negative margin
+                method on <code class="highlighter-rouge">.row</code> to ensure all your content is aligned properly down
+                the left side.</li>
+            <li>Content should be placed within columns, and only columns may be immediate children of rows.</li>
+            <li>Thanks to flexbox, grid columns without a set width will automatically layout with equal widths. For example,
+                four instances of <code class="highlighter-rouge">.col-sm</code> will each automatically be 25% wide for
+                small breakpoints.</li>
+            <li>Column classes indicate the number of columns you’d like to use out of the possible 12 per row. So, if you want
+                three equal-width columns, you can use <code class="highlighter-rouge">.col-sm-4</code>.</li>
+            <li>Column <code class="highlighter-rouge">width</code>s are set in percentages, so they’re always fluid and sized
+                relative to their parent element.</li>
+            <li>Columns have horizontal <code class="highlighter-rouge">padding</code> to create the gutters between individual
+                columns, however, you can remove the <code class="highlighter-rouge">margin</code> from rows and <code class="highlighter-rouge">padding</code>                from columns with <code class="highlighter-rouge">.no-gutters</code> on the <code class="highlighter-rouge">.row</code>.</li>
+            <li>There are five grid tiers, one for each <a href="https://getbootstrap.com/docs/4.0/layout/grid/#responsive-breakpoints">responsive breakpoint</a>:
+                all breakpoints (extra small), small, medium, large, and extra large.</li>
+            <li>Grid tiers are based on minimum widths, meaning they apply to that one tier and all those above it (e.g.,
+                <code class="highlighter-rouge">.col-sm-4</code> applies to small, medium, large, and extra large devices).</li>
+            <li>You can use predefined grid classes or Sass mixins for more semantic markup.</li>
+        </ul>
+        <br/>
+        <br/>
+        <h3>Components</h3><br/>
+        <p>All components you can use with bootstrap you can find <a href="https://getbootstrap.com/docs/4.0/components/">here</a>.
+            On the page you can just copy the code given. The only thing you have to do is to customize it. After this, you
+            can use it, if your project uses Bootstrap.</p>
+        <br/>
+        <br/>
+        <h3>Things to know</h3><br/>
+        <p><a href="https://getbootstrap.com/docs/4.0/examples/">Here</a> you can find some templates of websites made with Bootstrap.</p>
     </main>
     <footer class="footer">
         <div class="container">

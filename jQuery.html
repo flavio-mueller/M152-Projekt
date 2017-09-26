@@ -11,11 +11,13 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/Style.css">
     <link rel="shortcut icon" href="Content/favico.ico">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
 </head>
 
-<body style="background-color: black">
+<body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="background-color: black !important;">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <a class="navbar-brand" href="index.html">Projektarbeit</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02"
                 aria-expanded="false" aria-label="Toggle navigation">
@@ -44,8 +46,63 @@
         </nav>
     </header>
 
-    <main style="margin-top: 3rem">
-
+    <main>
+        <div class="container align-content-center">
+            <div class="Header-text">JQuery</div>
+            <h3>What is JQuery</h3>
+            <br>
+            <ul>
+                <li>free JavaScript-Library</li>
+                <li>Most used JS-Library</li>
+                <li>Bootstrap uses Jquery already</li>
+            </ul>
+            <br>
+            <br>
+            <h3>Functions of JQuery</h3>
+            <ul>
+                <li>Elementselection in the DOM</li>
+                <li>DOM-Manipulation</li>
+                <li>Enhanced Event-System</li>
+                <li>Animations and Effects</li>
+                <li>Ajax-Functionality</li>
+                <li>Multiple free Plugins available</li>
+            </ul>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-lg-5">
+                    <h3>Setup JQuery</h3>
+                    <ul>
+                        <li>JQuery needs to be imported above the JS code.</li>
+                        <li>Code inside the ready funtion gets called automatic after the page is loaded completly.</li>
+                    </ul>
+                </div>
+                <div class="col-lg-7">
+                    <figure class=highlight>
+                        <pre>
+<code class=language-html data-lang=html><span class=c>&lt;!-- Add the library. *Must* come before any calls! --&gt;</span>
+<span class=nt>&lt;script </span><span class=na>src=</span><span class=s>"https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"</span><span class=nt>&gt;&lt;/script&gt;</span>
+<span class=nt>&lt;script&gt;</span>
+    <span class="white">$</span><span class="white">(</span><span class="white">document</span><span class="white">).</span><span class="white">ready</span><span class="white">(</span><span class="kd">function</span> <span class="white">() {</span>
+        <span class=c>// jQuery code</span>
+    <span class="white">});</span>
+<span class=nt>&lt;/script&gt;</span></code></pre>
+                    </figure>
+                </div>
+            </div>
+            <br>
+            <br>
+            <h3>Debugging</h3>
+            <br>
+            <p>With <code class="highlighter-rouge">alert("")</code> a new Window gets opened and the Message gets displayed inside.</p>
+            <p>With <code class="highlighter-rouge">console.log("")</code> you can log all kinds of things.</p>
+            <br>
+            <br>
+            <h3>Edit DOM-elements</h3>
+            <br>
+            <p>This code <code class="highlighter-rouge">$("p").click(function(){});</code> gets executed, when someone clicks on a p container.</p>
+            <p>This code <code class="highlighter-rouge">$("#idElement").click(function(){});</code> gets executed, when someone clicks on the element with the given ID.</p>
+        </div>
     </main>
     <footer class="footer">
         <div class="container">
@@ -55,8 +112,6 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
