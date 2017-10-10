@@ -12,19 +12,23 @@
     <link rel="stylesheet" href="css/Style.css">
     <link rel="shortcut icon" href="Content/favico.ico">
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+    <script rel="JavaScript" src="js/jquery-3.2.1.min.js"></script>
     <script>
         var isCollapsed = false;
         $(document).ready(function () {
+
+            var isCollapsed = false;
+
             // jQuery code
             $("#log1").click(function () {
-                if (isCollapsed) {
-                    $("#logText1").show();
-                } else {
-                    $("#logText1").hide();
+                $("#logText1").fadeToggle(500);
+
+                if(isCollapsed){
+                    $('#logHeader1').remoClass("logHeaderCollapsed", "logHeader", 500);
+                }else{
+                    $('#logHeader1').switchClass("logHeader", "logHeaderCollapsed", 500);                    
                 }
-                isCollapsed = !isCollapsed;
+                isCollapsed = !isCollapsed
             });
         });
     </script>

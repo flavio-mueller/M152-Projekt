@@ -91,6 +91,13 @@ body{
     color: #868e96!important;    
 }
 
+
+.logHeaerCollapsed{
+    color: black;
+    font-size: 16px;
+    margin-bottom: 0.8em;
+}
+
 @media (min-width: 20em) {
     .featurette-heading {
         margin-top: 2rem;
@@ -124,6 +131,11 @@ body{
         margin-bottom: 1.5em;
     }
 
+    .logHeaderCollapsed{
+        font-size: 24px;
+        margin-bottom: 1.2em;
+    }
+
     .logContainer{
         margin: 2rem;
         padding:4em;
@@ -144,6 +156,11 @@ body{
     .logHeader{
         font-size: 40px;
         margin-bottom: 1.5em;
+    }
+
+    .logHeaderCollapsed{
+        font-size: 32px;
+        margin-bottom: 1.3em;
     }
 }
 
