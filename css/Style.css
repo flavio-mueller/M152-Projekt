@@ -67,7 +67,7 @@ body{
 .Header-text{
     color: #868e96!important;
     text-align: center;
-    font-size: 20px;    
+    font-size: 45px;
 }
 
 
@@ -75,6 +75,9 @@ body{
     color: black;
     font-size: 20px;
     margin-bottom: 1em;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .logContainer{
@@ -87,6 +90,16 @@ body{
     position:relative;
 }
 
+.logContainerCollapsed{
+    margin: 1rem;
+    background-color: white;
+    opacity: 0.75;
+    border-radius: 15px;
+    text-align:center;
+    padding:0.5em;
+    position:relative;
+}
+
 .logText{
     color: #868e96!important;    
 }
@@ -95,8 +108,10 @@ body{
 .logHeaerCollapsed{
     color: black;
     font-size: 16px;
-    margin-bottom: 0.8em;
+    margin-bottom: 0em;
 }
+
+
 
 @media (min-width: 20em) {
     .featurette-heading {
@@ -105,7 +120,6 @@ body{
 
     .Header-text{
         margin-top: 3rem;
-        font-size: 30px;
         margin-bottom: 1rem;
     }
 
@@ -133,13 +147,18 @@ body{
 
     .logHeaderCollapsed{
         font-size: 24px;
-        margin-bottom: 1.2em;
+        margin-bottom: 0em;
     }
 
     .logContainer{
         margin: 2rem;
         padding:4em;
         padding-top: 2em;
+    }
+
+    .logContainerCollapsed{
+        margin: 1.2rem;
+        padding:0.6em;
     }
 }
 @media (min-width: 62em) {
@@ -160,7 +179,12 @@ body{
 
     .logHeaderCollapsed{
         font-size: 32px;
-        margin-bottom: 1.3em;
+        margin-bottom: 0em;
+    }
+
+    .logContainerCollapsed{
+        margin: 1.4rem;
+        padding:0.6em;
     }
 }
 

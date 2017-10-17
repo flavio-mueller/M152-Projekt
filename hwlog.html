@@ -14,22 +14,45 @@
 
     <script rel="JavaScript" src="js/jquery-3.2.1.min.js"></script>
     <script>
-        var isCollapsed = false;
         $(document).ready(function () {
 
-            var isCollapsed = false;
+            var isCollapsed1 = false;
+            var isCollapsed2 = false;
+            var isCollapsed3 = false;
 
             // jQuery code
             $("#log1").click(function () {
+                logToggle($('#logHeader1'), $('#log1'), isCollapsed1);
                 $("#logText1").fadeToggle(500);
-
-                if(isCollapsed){
-                    $('#logHeader1').remoClass("logHeaderCollapsed", "logHeader", 500);
-                }else{
-                    $('#logHeader1').switchClass("logHeader", "logHeaderCollapsed", 500);                    
-                }
-                isCollapsed = !isCollapsed
+                isCollapsed1 = !isCollapsed1
             });
+
+            $("#log2").click(function () {
+                logToggle($('#logHeader2'), $('#log2'), isCollapsed2);
+                $("#logText2").fadeToggle(500);
+                isCollapsed2 = !isCollapsed2
+            });
+
+            $("#log3").click(function () {
+                logToggle($('#logHeader3'), $('#log3'), isCollapsed3);
+                $("#logText3").fadeToggle(500);
+                isCollapsed3 = !isCollapsed3
+            });
+
+            function logToggle(logHeader, logContainer, isLogCollapsed) {
+                if (isLogCollapsed) {
+                    logHeader.removeClass("logHeaderCollapsed", "slow");
+                    logHeader.addClass("logHeader", "slow");
+                    logContainer.addClass("logContainer", 500);
+                    logContainer.removeClass("logContainerCollapsed", 500);
+                } else {
+                    logHeader.addClass("logHeaderCollapsed", "slow");
+                    logHeader.removeClass("logHeader", "slow");
+                    logContainer.removeClass("logContainer", 500);
+                    logContainer.addClass("logContainerCollapsed", 500);
+                }
+            }
+
         });
     </script>
 </head>
@@ -56,6 +79,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="jQuery.html">jQuery</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="picture.html">Pictures</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="video.html">Videos</a>
+                    </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="text" placeholder="Search">
@@ -71,8 +100,22 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="logContainer" id="log1">
-                        <div class="logHeader" id="logHeader1">Hausaufgabenlog Nr. 1</div>
+                        <div class="logHeader" id="logHeader1">
+                            <div id="logHederText1">Hausaufgabenlog Nr. 1</div>
+                        </div>
                         <div class="logText" id="logText1">Das ist mein erster Hausaufgabenlog. Ich habe nichts für den Informatikunterricht gemacht.</div>
+                    </div>
+                    <div class="logContainer" id="log2">
+                        <div class="logHeader" id="logHeader2">
+                            <div id="logHederText2">Hausaufgabenlog Nr. 2</div>
+                        </div>
+                        <div class="logText" id="logText2">Das ist mein erster Hausaufgabenlog. Ich habe nichts für den Informatikunterricht gemacht.</div>
+                    </div>
+                    <div class="logContainer" id="log3">
+                        <div class="logHeader" id="logHeader3">
+                            <div id="logHederText3">Hausaufgabenlog Nr. 3</div>
+                        </div>
+                        <div class="logText" id="logText3">Das ist mein erster Hausaufgabenlog. Ich habe nichts für den Informatikunterricht gemacht.</div>
                     </div>
                 </div>
             </div>
