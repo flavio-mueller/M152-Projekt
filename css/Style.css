@@ -295,3 +295,15 @@ p{
 li{
     color: #999;
 }
+
+tr.colored td{
+    background-color: #92D5FF;
+}
+
+tr.coloredHover td{
+    background-color: #f60;
+}
+
+th{
+    background-color: #99f;
+}
