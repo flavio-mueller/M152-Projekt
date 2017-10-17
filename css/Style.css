@@ -307,3 +307,10 @@ tr.coloredHover td{
 th{
     background-color: #99f;
 }
+
+.mouseCoordinates{
+    width: 400px;
+    height: 400px;
+    background-color: #0cf;
+}
+         

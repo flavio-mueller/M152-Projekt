@@ -9,10 +9,14 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/hangman.css">
     <link rel="stylesheet" href="css/Style.css">
     <link rel="shortcut icon" href="Content/favico.ico">
 
     <script rel="JavaScript" src="js/jquery-3.2.1.min.js"></script>
+    <script rel="JavaScript" src="js/hangman.js"></script>
+    
 </head>
 
 <body>
@@ -27,7 +31,7 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="hwlog.html">
+                        <a class="nav-link " href="hwlog.html">
                             Hausaufgabenlog
                         </a>
                     </li>
@@ -41,10 +45,10 @@
                         <a class="nav-link" href="picture.html">Pictures</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link activeNavItem" href="video.html">Videos</a>
+                        <a class="nav-link" href="video.html">Videos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="hangman.html">Hangman</a>
+                        <a class="nav-link activeNavItem" href="hangman.html">Hangman</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
@@ -56,7 +60,13 @@
     </header>
 
     <main>
-        <div class="Header-text">Videos</div>
+        <div class="container align-content-center">
+            <div id="topbar" class="Header-text">Hangman</div>
+            <div class="row justify-content-center">
+                <div class="spacer"></div>
+                <div id="gameContent"></div>
+            </div>
+        </div>
     </main>
     <footer class="footer">
         <div class="container">

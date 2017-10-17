@@ -12,20 +12,7 @@
     <link rel="stylesheet" href="css/Style.css" />
     <link rel="shortcut icon" href="Content/favico.ico" />
     <script rel="JavaScript" src="js/jquery-3.2.1.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $("tr").addClass("colored");
-
-            $("tr").mouseover(function(){
-                $(this).addClass("coloredHover");
-            });
-
-            $("tr").mouseout(function(){
-                $(this).removeClass("coloredHover");
-            });
-
-        });
-    </script>
+    <script rel="JavaScript" src="js/rainDrop.js"></script>
 </head>
 
 <body>
@@ -56,6 +43,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="video.html">Videos</a>
                     </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="hangman.html">Hangman</a>
+                        </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="text" placeholder="Search">
@@ -114,7 +104,8 @@
             <h3>Debugging</h3>
             <br>
             <p>With <code class="highlighter-rouge">alert("")</code> a new Window gets opened and the Message gets displayed
-                inside.</p>
+                inside.
+            </p>
             <p>With <code class="highlighter-rouge">console.log("")</code> you can log all kinds of things.</p>
             <p>With the Google Chrome Developer Tools (f12) you can even set breakpoints in your JavaScript code.</p>
             <br>
@@ -153,6 +144,25 @@
                     </tbody>
                 </table>
             </div>
+            <br>
+            <br>
+            <h3>Rain-Effect</h3>
+            <br>
+            <p>
+                var rainChars = '1234567890ABCDEFX'; var verschiebeZeichen = function() { var i_char = Math.floor(Math.random() * rainChars.length);
+                var left_position = Math.floor(Math.random() * screen.width); //For generating unique id var d = new Date();
+                var n = d.getTime(); $("body").append("&lt;span id='curr_character_" + n + "' class='dropping_characters'>"
+                + rainChars[i_char] + "&lt;/span>"); var $curr = $("#curr_character_" + n); $curr.css("position", "fixed");
+                $curr.css("top", "0px"); $curr.css("left", left_position); $curr.css("color", "white") $curr.animate({ top:
+                "+=" + screen.height + "px", fontSize: "+=10em" }, 6000, "linear", function () { $curr.remove(); }); }; setInterval(verschiebeZeichen,
+                300);
+            </p>
+            <br>
+            <br>
+            <h3>Mouse-Coordinates</h3>
+            <br>
+            <div class="mouseCoordinates"></div>
+            <p class="white" id="mouseCordsText"></p>
         </div>
     </main>
     <footer class="footer">
