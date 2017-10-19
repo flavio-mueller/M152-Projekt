@@ -1,25 +1,3 @@
-#gameContent {
-  margin: auto;
-  width: 800px;
-  height: 400px;
-  position: relative;
-  overflow: hidden;
-  background-color: #3498db;
-}
-
-.spacer {
-  height: 30px;
-}
-#gameTitle {
-  margin-top: 100px;
-  text-align: center;
-  font-size: 40px;
-  color: #fff;
-}
-
-#replay {
-  margin-left: 0px;
-}
 #wordHolder {
   margin-top: 50px;
   margin-left: 150px;
@@ -78,4 +56,54 @@
   position: absolute;
   left: -200px;
   top: 0px;
+}
+
+#gameTitle {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 40px;
+  color: #fff;
+}
+
+.button {
+  font-size: 17px;
+  width: 100px;
+  margin: auto;
+  margin-top: 20px;
+  cursor: pointer;
+  border: solid 1px white;
+  border-radius: 4px;
+  text-align: center;
+  color: #fff;
+}
+
+.button:hover {
+  background-color: #6ab0fd;
+}
+
+#replay {
+  margin-left: 0px;
+}
+
+#topbar {
+  height: 50px;
+  margin: auto;
+  margin-top: 50px;
+  color: #fff;
+  font-size: 36px;
+  width: 800px;
+  border-bottom: solid white 1px;
+}
+
+#gameContent {
+  margin: auto;
+  width: 800px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  background-color: #3498db;
+}
+
+.spacer {
+  height: 30px;
 }

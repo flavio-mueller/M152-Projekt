@@ -13,6 +13,7 @@
     <link rel="shortcut icon" href="Content/favico.ico">
 
     <script rel="JavaScript" src="js/jquery-3.2.1.min.js"></script>
+    <script rel="JavaScript" src="js/rainDrop.js"></script>
 </head>
 
 <body>
@@ -41,17 +42,17 @@
                         <a class="nav-link" href="jQueryEffectsTheorie.html">jQuery Effects Theorie</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="jQueryEffects.html">jQuery Effects</a>
+                        <a class="nav-link activeNavItem" href="jQueryEffects.html">jQuery Effects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link activeNavItem" href="picture.html">Pictures</a>
+                        <a class="nav-link" href="picture.html">Pictures</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="video.html">Videos</a>
                     </li>
                     <li class="nav-item">
-                            <a class="nav-link" href="hangman.html">Hangman</a>
-                        </li>
+                        <a class="nav-link" href="hangman.html">Hangman</a>
+                    </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="text" placeholder="Search">
@@ -62,7 +63,41 @@
     </header>
 
     <main>
-        <div class="Header-text">Pictures</div>        
+        <div class="container align-content-center">
+            <div class="Header-text">JQuery Effects</div>
+            <h3>CSS-Effects with JQuery</h3>
+            <br>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Vorname</th>
+                            <th>Nachname</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Susanne</td>
+                            <td>Muster</td>
+                        </tr>
+                        <tr>
+                            <td>Rudi</td>
+                            <td>Rüssel</td>
+                        </tr>
+                        <tr>
+                            <td>Bert</td>
+                            <td>Bachmann</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br>
+            <br>
+            <h3>Mouse-Coordinates</h3>
+            <br>
+            <div class="mouseCoordinates"></div>
+            <p class="white" id="mouseCordsText"></p>
+        </div>
     </main>
     <footer class="footer">
         <div class="container">

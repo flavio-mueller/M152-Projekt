@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="css/Style.css" />
     <link rel="shortcut icon" href="Content/favico.ico" />
     <script rel="JavaScript" src="js/jquery-3.2.1.min.js"></script>
-    <script rel="JavaScript" src="js/rainDrop.js"></script>
 </head>
 
 <body>
@@ -36,6 +35,12 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link activeNavItem" href="jQuery.html">jQuery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="jQueryEffectsTheorie.html">jQuery Effects Theorie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="jQueryEffects.html">jQuery Effects</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="picture.html">Pictures</a>
@@ -117,52 +122,7 @@
             <p>This code <code class="highlighter-rouge">$("#idElement").click(function(){});</code> gets executed, when someone
                 clicks on the element with the given ID.</p>
             <br>
-            <br>
-            <h3>JQuery-CSS</h3>
-            <br>
-            <div class="table-responsive">
-                <table class="table table-bordered table-striped">
-                    <thead>
-                        <tr>
-                            <th>Vorname</th>
-                            <th>Nachname</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Susanne</td>
-                            <td>Muster</td>
-                        </tr>
-                        <tr>
-                            <td>Rudi</td>
-                            <td>Rüssel</td>
-                        </tr>
-                        <tr>
-                            <td>Bert</td>
-                            <td>Bachmann</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <br>
-            <br>
-            <h3>Rain-Effect</h3>
-            <br>
-            <p>
-                var rainChars = '1234567890ABCDEFX'; var verschiebeZeichen = function() { var i_char = Math.floor(Math.random() * rainChars.length);
-                var left_position = Math.floor(Math.random() * screen.width); //For generating unique id var d = new Date();
-                var n = d.getTime(); $("body").append("&lt;span id='curr_character_" + n + "' class='dropping_characters'>"
-                + rainChars[i_char] + "&lt;/span>"); var $curr = $("#curr_character_" + n); $curr.css("position", "fixed");
-                $curr.css("top", "0px"); $curr.css("left", left_position); $curr.css("color", "white") $curr.animate({ top:
-                "+=" + screen.height + "px", fontSize: "+=10em" }, 6000, "linear", function () { $curr.remove(); }); }; setInterval(verschiebeZeichen,
-                300);
-            </p>
-            <br>
-            <br>
-            <h3>Mouse-Coordinates</h3>
-            <br>
-            <div class="mouseCoordinates"></div>
-            <p class="white" id="mouseCordsText"></p>
+            <br>            
         </div>
     </main>
     <footer class="footer">

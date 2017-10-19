@@ -38,20 +38,20 @@
                         <a class="nav-link" href="jQuery.html">jQuery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="jQueryEffectsTheorie.html">jQuery Effects Theorie</a>
+                        <a class="nav-link activeNavItem" href="jQueryEffectsTheorie.html">jQuery Effects Theorie</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="jQueryEffects.html">jQuery Effects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link activeNavItem" href="picture.html">Pictures</a>
+                        <a class="nav-link" href="picture.html">Pictures</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="video.html">Videos</a>
                     </li>
                     <li class="nav-item">
-                            <a class="nav-link" href="hangman.html">Hangman</a>
-                        </li>
+                        <a class="nav-link" href="hangman.html">Hangman</a>
+                    </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="text" placeholder="Search">
@@ -62,7 +62,39 @@
     </header>
 
     <main>
-        <div class="Header-text">Pictures</div>        
+        <div class="container align-content-center">
+            <div class="Header-text">JQuery Effects Theorie</div>
+            <h3>CSS-Eeffects</h3>
+            <br>
+            <p> $("tr").addClass("colored"); $("tr").mouseover(function(){ $(this).addClass("coloredHover"); }); $("tr").mouseout(function(){
+                $(this).removeClass("coloredHover"); });
+            </p>
+            <br>
+            <br>
+            <h3>Rain-Effect</h3>
+            <br>
+            <p>
+                var rainChars = '1234567890ABCDEFX'; var verschiebeZeichen = function() { var i_char = Math.floor(Math.random() * rainChars.length);
+                var left_position = Math.floor(Math.random() * screen.width); //For generating unique id var d = new Date();
+                var n = d.getTime(); $("body").append("&lt;span id='curr_character_" + n + "' class='dropping_characters'>"
+                + rainChars[i_char] + "&lt;/span>"); var $curr = $("#curr_character_" + n); $curr.css("position", "fixed");
+                $curr.css("top", "0px"); $curr.css("left", left_position); $curr.css("color", "white") $curr.animate({ top:
+                "+=" + screen.height + "px", fontSize: "+=10em" }, 6000, "linear", function () { $curr.remove(); }); }; setInterval(verschiebeZeichen,
+                300);
+            </p>
+            <br>
+            <br>
+            <h3>Mouse-Coordinates</h3>
+            <br>
+            <p> $("#mouseCoordinates").on("mousemove", function( event ) { $("#mouseCordsText").text( "pageX: " + event.pageX
+                + ", pageY: " + event.pageY ); });
+            </p>
+            <br>
+            <br>
+            <h3>Hangman</h3>
+            <br>
+            <p>For the original Hangman documentation visit the <a target="blank" href="http://www.flashbynight.com/tutes/hangmanhtml5/example/">Tutorial</a>.</p>
+        </div>
     </main>
     <footer class="footer">
         <div class="container">

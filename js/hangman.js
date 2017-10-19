@@ -6,13 +6,13 @@ $(document).ready(function() {
   var currentClue;
   var wrongAnswerCount;
 
-  $.getJSON("../Content/quizbank.json", function(data) {
+  $.getJSON('Content/quizbank.json', function(data) {
     for (i = 0; i < data.wordlist.length; i++) {
       questionBank[i] = new Array();
       questionBank[i][0] = data.wordlist[i].word;
       questionBank[i][1] = data.wordlist[i].clue;
     }
-    alert(questionBank);
+    titleScreen();
   }); //getJSON
 
   function titleScreen() {
@@ -27,7 +27,7 @@ $(document).ready(function() {
   function gameScreen() {
     $("#gameContent").empty();
     $("#gameContent").append(
-      '<div id="pixHolder"><img id="hangman" src="man.png"></div>'
+      '<div id="pixHolder"><img id="hangman" src="Content/hangman.png"></div>'
     );
     $("#gameContent").append('<div id="wordHolder"></div>');
     $("#gameContent").append('<div id="clueHolder"></div>');

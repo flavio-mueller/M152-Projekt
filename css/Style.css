@@ -297,15 +297,15 @@ li{
 }
 
 tr.colored td{
-    background-color: #92D5FF;
+    background-color: #7BBE7E;
 }
 
 tr.coloredHover td{
-    background-color: #f60;
+    background-color: rgb(114, 206, 206);
 }
 
 th{
-    background-color: #99f;
+    background-color: #5CA7D3;
 }
 
 .mouseCoordinates{
