@@ -27,21 +27,21 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="hwlog.html">
-                            Hausaufgabenlog
-                        </a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="Bootstrap.html">Bootstrap</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="jQuery.html">jQuery</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle activeNavItem" href="jQuery.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              JQuery
+                            </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="JQuery.html">Basics</a>
+                            <a class="dropdown-item" href="JQueryEffects.html">Effects</a>
+                            <a class="dropdown-item" href="jQueryEffectsTheorie.html">Effects Code</a>
+                            <a class="dropdown-item" href="hangman.html">Hangman</a>
+                        </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link activeNavItem" href="jQueryEffectsTheorie.html">jQuery Effects Theorie</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="jQueryEffects.html">jQuery Effects</a>
+                        <a class="nav-link" href="multimedia.html">Multimedia</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="picture.html">Pictures</a>
@@ -49,51 +49,89 @@
                     <li class="nav-item">
                         <a class="nav-link" href="video.html">Videos</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="hangman.html">Hangman</a>
-                    </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
             </div>
         </nav>
     </header>
 
     <main>
         <div class="container align-content-center">
-            <div class="Header-text">JQuery Effects Theorie</div>
+            <div class="Header-text">JQuery Effects Code</div>
             <h3>CSS-Eeffects</h3>
             <br>
-            <p> $("tr").addClass("colored"); $("tr").mouseover(function(){ $(this).addClass("coloredHover"); }); $("tr").mouseout(function(){
-                $(this).removeClass("coloredHover"); });
-            </p>
+            <figure class=highlight>
+                <pre>
+                    <code class=language-html data-lang=JavaScript>
+<span class="na">$</span><span class="white">(</span><span class="s">"tr"</span><span class="white">).addClass(</span><span class="s">"colored"</span><span class="white">);</span>
+
+<span class="na">$</span><span class="white">(</span><span class="s">"tr"</span><span class="white">).mouseover(</span><span class="nt">function</span><span class="white">(){</span>
+    <span class="na">$</span><span class="white">(</span><span class="nt">this</span><span class="white">).addClass(</span><span class="s">"coloredHover"</span><span class="white">); 
+});</span>
+
+<span class="na">$</span><span class="white">(</span><span class="s">"tr"</span><span class="white">).mouseout(</span><span class="nt">function</span><span class="white">(){</span>
+    <span class="na">$</span><span class="white">(</span><span class="nt">this</span><span class="white">).removeClass(</span><span class="s">"coloredHover"</span><span class="white">); 
+});</span>
+                        
+                    </code>
+                </pre>
+            </figure>
             <br>
             <br>
             <h3>Rain-Effect</h3>
             <br>
-            <p>
-                var rainChars = '1234567890ABCDEFX'; var verschiebeZeichen = function() { var i_char = Math.floor(Math.random() * rainChars.length);
-                var left_position = Math.floor(Math.random() * screen.width); //For generating unique id var d = new Date();
-                var n = d.getTime(); $("body").append("&lt;span id='curr_character_" + n + "' class='dropping_characters'>"
-                + rainChars[i_char] + "&lt;/span>"); var $curr = $("#curr_character_" + n); $curr.css("position", "fixed");
-                $curr.css("top", "0px"); $curr.css("left", left_position); $curr.css("color", "white") $curr.animate({ top:
-                "+=" + screen.height + "px", fontSize: "+=10em" }, 6000, "linear", function () { $curr.remove(); }); }; setInterval(verschiebeZeichen,
-                300);
-            </p>
+            <figure class=highlight>
+                <pre>
+                    <code class=language-html data-lang=JavaScript>
+<span class="na">var</span><span class="white"> rainChars = </span><span class="s">'1234567890ABCDEFX'</span><span class="white">;</span>
+
+<span class="na">var</span><span class=white> verschiebeZeichen = </span><span class="nt">function</span><span class="white">() { </span>
+   
+    <span class="na">var </span><span class="white">i_char = </span><span class="sr">Math</span><span class="white">.floor(</span><span class="sr">Math</span><span class="white">.random() * rainChars.length);</span>
+    <span class="na">var</span> <span class="white">left_position = </span><span class="sr">Math</span><span class="white">.floor(</span><span class="sr">Math</span><span class="white">.random() * screen.width);</span> 
+   
+    <span class="c">//For generating unique id </span>
+    <span class="na">var</span><span class="white"> d = </span> <span class="nl">new</span> <span class="sr">Date</span><span class="white">();</span>
+    <span class="na">var</span><span class="white"> n = d.getTime();</span> 
+
+    <span class="na">$</span><span class="white">(</span><span class="s">"body"</span><span class="white">).append(</span><span class="s">"&lt;span id='curr_character_"</span><span class="white"> + n + </span><span class="s">"' class='dropping_characters'>"</span><span class="white"> + rainChars[i_char] + </span><span class="s">"&lt;/span>"</span><span class="white">);</span>
+    
+    <span class="na">var</span><span class="white"> $curr = </span><span class="na">$</span><span class="white">(</span><span class="s">"#curr_character_"</span><span class="white"> + n); </span>
+    <span class="white">$curr.css(</span><span class="s">"position"</span><span class="white">, </span><span class="s">"fixed"</span><span class="white">);</span>
+    <span class="white">$curr.css(</span><span class="s">"top"</span><span class="white">,</span><span class="s"> "0px"</span><span class="white">);</span>
+    <span class="white">$curr.css(</span><span class="s">"left"</span><span class="white">,</span><span class="s"> "left_position"</span><span class="white">);</span>
+    <span class="white">$curr.css(</span><span class="s">"color"</span><span class="white">,</span><span class="s"> "white"</span><span class="white">);</span>
+    
+    <span class="white">$curr.animate({ 
+        top:</span><span class="s">"+="</span><span class="white"> + screen.height + </span><span class="s">"px"</span><span class="white">, 
+        fontSize: </span><span class="white">"+=10em"</span><span class="white"> }, 6000, </span><span class="s">"linear"</span><span class="white">,</span><span class="nt"> function</span><span class="white">() { 
+            $curr.remove(); 
+        }); 
+    }; 
+    
+    setInterval(verschiebeZeichen, 300);</span>
+
+                    </code>
+                </pre>
+            </figure>
             <br>
             <br>
             <h3>Mouse-Coordinates</h3>
             <br>
-            <p> $("#mouseCoordinates").on("mousemove", function( event ) { $("#mouseCordsText").text( "pageX: " + event.pageX
-                + ", pageY: " + event.pageY ); });
-            </p>
+
+            <figure class=highlight>
+                <pre>
+                    <code class=language-html data-lang=JavaScript>
+<span class="na">$</span><span class="white">(</span><span class="s">"div.mouseCoordinates"</span><span class="white">).on(</span><span class="s">"mousemove"</span><span class="white">, </span><span class="nt">function</span><span class="white">( </span><span class="nt">event</span><span class="white"> ) { </span>
+    <span class="na">$</span><span class="white">(</span><span class="s">"#mouseCordsText"</span><span class="white">).text( </span><span class="s">"pageX: "</span><span class="white"> + event.pageX+ </span><span class="s">", pageY: "</span><span class="white"> + event.pageY ); 
+});</span>
+                    </code>
+                </pre>
+            </figure>
             <br>
             <br>
             <h3>Hangman</h3>
             <br>
-            <p>For the original Hangman documentation visit the <a target="blank" href="http://www.flashbynight.com/tutes/hangmanhtml5/example/">Tutorial</a>.</p>
+            <p>For the original Hangman documentation visit the <a target="blank" href="http://www.flashbynight.com/tutes/hangmanhtml5/">Tutorial</a>.</p>
         </div>
     </main>
     <footer class="footer">

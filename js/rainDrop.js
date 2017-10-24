@@ -36,7 +36,7 @@ $(document).ready(function () {
     
     setInterval(verschiebeZeichen, 300);
 
-    $("#mouseCoordinates").on("mousemove", function( event ) {
+    $("div.mouseCoordinates").on("mousemove", function( event ) {
         $("#mouseCordsText").text( "pageX: " + event.pageX + ", pageY: " + event.pageY );
     });
 
